@@ -2,14 +2,14 @@
 # See license.txt
 
 import frappe
-from frappe.tests import IntegrationTestCase
+from frappe.tests import UnitTestCase
 
 import erpnext
 
 test_dependencies = ["Employee", "Leave Type", "Leave Policy"]
 
 
-class TestLeavePeriod(IntegrationTestCase):
+class TestLeavePeriod(UnitTestCase):
 	pass
 
 

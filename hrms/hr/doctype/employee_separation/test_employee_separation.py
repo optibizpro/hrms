@@ -2,13 +2,13 @@
 # See license.txt
 
 import frappe
-from frappe.tests import IntegrationTestCase
+from frappe.tests import UnitTestCase
 from frappe.utils import getdate
 
 test_dependencies = ["Employee Onboarding"]
 
 
-class TestEmployeeSeparation(IntegrationTestCase):
+class TestEmployeeSeparation(UnitTestCase):
 	def test_employee_separation(self):
 		separation = create_employee_separation()
 

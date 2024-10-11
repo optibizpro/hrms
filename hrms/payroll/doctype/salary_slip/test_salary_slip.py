@@ -6,7 +6,7 @@ import random
 
 import frappe
 from frappe.model.document import Document
-from frappe.tests import IntegrationTestCase, change_settings
+from frappe.tests import UnitTestCase, change_settings
 from frappe.utils import (
 	add_days,
 	add_months,
@@ -48,7 +48,7 @@ from hrms.payroll.doctype.salary_structure.salary_structure import make_salary_s
 from hrms.tests.test_utils import get_email_by_subject, get_first_sunday
 
 
-class TestSalarySlip(IntegrationTestCase):
+class TestSalarySlip(UnitTestCase):
 	def setUp(self):
 		setup_test()
 		frappe.flags.pop("via_payroll_entry", None)
@@ -1664,7 +1664,7 @@ class TestSalarySlip(IntegrationTestCase):
 		self.assertListEqual(tax_component, ["_Test TDS"])
 
 
-class TestSalarySlipSafeEval(IntegrationTestCase):
+class TestSalarySlipSafeEval(UnitTestCase):
 	def test_safe_eval_for_salary_slip(self):
 		TEST_CASES = {
 			"1+1": 2,

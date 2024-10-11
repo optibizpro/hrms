@@ -2,7 +2,7 @@
 # License: GNU General Public License v3. See license.txt
 
 import frappe
-from frappe.tests import IntegrationTestCase
+from frappe.tests import UnitTestCase
 
 from erpnext.setup.doctype.employee.test_employee import make_employee
 
@@ -10,7 +10,7 @@ from hrms.hr.page.organizational_chart.organizational_chart import get_children
 from hrms.tests.test_utils import create_company
 
 
-class TestOrganizationalChart(IntegrationTestCase):
+class TestOrganizationalChart(UnitTestCase):
 	def setUp(self):
 		self.company = create_company("Test Org Chart").name
 		frappe.db.delete("Employee", {"company": self.company})

@@ -2,7 +2,7 @@
 # See license.txt
 
 import frappe
-from frappe.tests import IntegrationTestCase
+from frappe.tests import UnitTestCase
 
 from erpnext.setup.doctype.designation.test_designation import create_designation
 from erpnext.setup.doctype.employee.test_employee import make_employee
@@ -12,7 +12,7 @@ from hrms.hr.doctype.appraisal_template.test_appraisal_template import create_ap
 from hrms.tests.test_utils import create_company
 
 
-class TestEmployeePerformanceFeedback(IntegrationTestCase):
+class TestEmployeePerformanceFeedback(UnitTestCase):
 	def setUp(self):
 		frappe.db.delete("Employee Performance Feedback")
 		frappe.db.delete("Appraisal")

@@ -1,8 +1,8 @@
 # Copyright (c) 2018, Frappe Technologies Pvt. Ltd. and Contributors
 # See license.txt
 
-from frappe.tests import IntegrationTestCase
+from frappe.tests import UnitTestCase
 
 
-class TestEmployeeBenefitClaim(IntegrationTestCase):
+class TestEmployeeBenefitClaim(UnitTestCase):
 	pass

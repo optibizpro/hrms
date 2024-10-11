@@ -2,7 +2,7 @@
 # License: GNU General Public License v3. See license.txt
 
 import frappe
-from frappe.tests import IntegrationTestCase
+from frappe.tests import UnitTestCase
 from frappe.utils import getdate
 
 from hrms.hr.doctype.leave_block_list.leave_block_list import get_applicable_block_dates
@@ -11,7 +11,7 @@ test_dependencies = ["Employee"]
 test_records = frappe.get_test_records("Leave Block List")
 
 
-class TestLeaveBlockList(IntegrationTestCase):
+class TestLeaveBlockList(UnitTestCase):
 	def tearDown(self):
 		frappe.set_user("Administrator")
 

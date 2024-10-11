@@ -2,7 +2,7 @@
 # See license.txt
 
 import frappe
-from frappe.tests import IntegrationTestCase
+from frappe.tests import UnitTestCase
 from frappe.utils import add_days, get_year_ending, get_year_start, getdate
 
 from erpnext.setup.doctype.employee.test_employee import make_employee
@@ -23,7 +23,7 @@ from hrms.tests.test_utils import get_first_sunday
 test_records = frappe.get_test_records("Leave Type")
 
 
-class TestLeaveEncashment(IntegrationTestCase):
+class TestLeaveEncashment(UnitTestCase):
 	def setUp(self):
 		for dt in [
 			"Leave Period",

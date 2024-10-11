@@ -2,7 +2,7 @@
 # See license.txt
 
 import frappe
-from frappe.tests import IntegrationTestCase
+from frappe.tests import UnitTestCase
 from frappe.utils import flt, nowdate, random_string
 
 from erpnext.accounts.doctype.account.test_account import create_account
@@ -19,7 +19,7 @@ test_dependencies = ["Employee"]
 company_name = "_Test Company 3"
 
 
-class TestExpenseClaim(IntegrationTestCase):
+class TestExpenseClaim(UnitTestCase):
 	def setUp(self):
 		if not frappe.db.get_value("Cost Center", {"company": company_name}):
 			cost_center = frappe.new_doc("Cost Center")

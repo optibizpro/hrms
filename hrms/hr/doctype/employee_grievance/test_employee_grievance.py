@@ -2,13 +2,13 @@
 # See license.txt
 
 import frappe
-from frappe.tests import IntegrationTestCase
+from frappe.tests import UnitTestCase
 from frappe.utils import today
 
 from erpnext.setup.doctype.employee.test_employee import make_employee
 
 
-class TestEmployeeGrievance(IntegrationTestCase):
+class TestEmployeeGrievance(UnitTestCase):
 	def test_create_employee_grievance(self):
 		create_employee_grievance()
 

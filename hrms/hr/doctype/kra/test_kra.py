@@ -2,8 +2,8 @@
 # See license.txt
 
 # import frappe
-from frappe.tests import IntegrationTestCase
+from frappe.tests import UnitTestCase
 
 
-class TestKRA(IntegrationTestCase):
+class TestKRA(UnitTestCase):
 	pass

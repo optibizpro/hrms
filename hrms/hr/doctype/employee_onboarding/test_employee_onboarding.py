@@ -2,7 +2,7 @@
 # See license.txt
 
 import frappe
-from frappe.tests import IntegrationTestCase
+from frappe.tests import UnitTestCase
 from frappe.utils import add_days, getdate
 
 from hrms.hr.doctype.employee_onboarding.employee_onboarding import (
@@ -14,7 +14,7 @@ from hrms.payroll.doctype.salary_slip.test_salary_slip import make_holiday_list
 from hrms.tests.test_utils import create_company
 
 
-class TestEmployeeOnboarding(IntegrationTestCase):
+class TestEmployeeOnboarding(UnitTestCase):
 	def setUp(self):
 		create_company()
 		if frappe.db.exists("Employee Onboarding", {"employee_name": "Test Researcher"}):

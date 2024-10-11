@@ -2,7 +2,7 @@
 # See license.txt
 
 import frappe
-from frappe.tests import IntegrationTestCase
+from frappe.tests import UnitTestCase
 from frappe.utils import add_years, cstr, date_diff, get_first_day, nowdate
 from frappe.utils.make_random import get_random
 
@@ -24,7 +24,7 @@ from hrms.tests.test_utils import create_employee_grade
 test_dependencies = ["Fiscal Year"]
 
 
-class TestSalaryStructure(IntegrationTestCase):
+class TestSalaryStructure(UnitTestCase):
 	def setUp(self):
 		for dt in ["Salary Slip", "Salary Structure", "Salary Structure Assignment"]:
 			frappe.db.sql("delete from `tab%s`" % dt)

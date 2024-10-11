@@ -2,7 +2,7 @@
 # See license.txt
 
 import frappe
-from frappe.tests import IntegrationTestCase
+from frappe.tests import UnitTestCase
 from frappe.utils import today
 
 from erpnext.setup.doctype.designation.test_designation import create_designation
@@ -14,7 +14,7 @@ from hrms.hr.doctype.employee_referral.employee_referral import (
 )
 
 
-class TestEmployeeReferral(IntegrationTestCase):
+class TestEmployeeReferral(UnitTestCase):
 	def setUp(self):
 		frappe.db.sql("DELETE FROM `tabJob Applicant`")
 		frappe.db.sql("DELETE FROM `tabEmployee Referral`")

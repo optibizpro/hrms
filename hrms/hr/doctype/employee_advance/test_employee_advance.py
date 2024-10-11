@@ -2,7 +2,7 @@
 # See license.txt
 
 import frappe
-from frappe.tests import IntegrationTestCase
+from frappe.tests import UnitTestCase
 from frappe.utils import flt, nowdate
 
 import erpnext
@@ -23,7 +23,7 @@ from hrms.payroll.doctype.salary_component.test_salary_component import create_s
 from hrms.payroll.doctype.salary_structure.test_salary_structure import make_salary_structure
 
 
-class TestEmployeeAdvance(IntegrationTestCase):
+class TestEmployeeAdvance(UnitTestCase):
 	def setUp(self):
 		frappe.db.delete("Employee Advance")
 

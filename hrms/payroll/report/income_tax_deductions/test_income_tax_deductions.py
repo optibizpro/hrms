@@ -1,5 +1,5 @@
 import frappe
-from frappe.tests import IntegrationTestCase
+from frappe.tests import UnitTestCase
 from frappe.utils import getdate
 
 from erpnext.setup.doctype.employee.test_employee import make_employee
@@ -14,7 +14,7 @@ from hrms.payroll.doctype.salary_structure.test_salary_structure import make_sal
 from hrms.payroll.report.income_tax_deductions.income_tax_deductions import execute
 
 
-class TestIncomeTaxDeductions(IntegrationTestCase):
+class TestIncomeTaxDeductions(UnitTestCase):
 	@classmethod
 	def setUpClass(cls):
 		super().setUpClass()

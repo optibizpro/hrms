@@ -1,8 +1,8 @@
 # Copyright (c) 2017, Frappe Technologies Pvt. Ltd. and Contributors
 # See license.txt
 
-from frappe.tests import IntegrationTestCase
+from frappe.tests import UnitTestCase
 
 
-class TestTrainingProgram(IntegrationTestCase):
+class TestTrainingProgram(UnitTestCase):
 	pass

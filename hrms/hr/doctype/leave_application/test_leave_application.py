@@ -79,6 +79,7 @@ _test_records = [
 
 class TestLeaveApplication(UnitTestCase):
 	def setUp(self):
+		super().setup()
 		for dt in [
 			"Leave Application",
 			"Leave Allocation",

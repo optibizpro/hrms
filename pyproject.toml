@@ -51,7 +51,7 @@ section-order = [
     "future",
     "standard-library",
     "third-party",
-    "frappe",
+    "optibizpro",
     "erpnext",
     "hrms",
     "first-party",

@@ -65,6 +65,6 @@ Repository = "https://github.com/optibizpro/hrms.git"
 "Bug Reports" = "https://github.com/optibizpro/hrms/issues"
 
 
-[tool.bench.frappe-dependencies]
-frappe = ">=15.0.0,<16.0.0"
+[tool.bench.optibizpro-dependencies]
+optibizpro = ">=15.0.0,<16.0.0"
 erpnext = ">=15.0.0,<16.0.0"

@@ -1,7 +1,7 @@
 [project]
 name = "hrms"
 authors = [
-    { name = "Frappe Technologies Pvt Ltd", email = "developers@frappe.io" },
+    { name = "Frappe Technologies Pvt Ltd", email = "support@optibizpro.com" },
 ]
 description = "Open Source HR & Payroll Software"
 requires-python = ">=3.10"
@@ -12,7 +12,7 @@ dynamic = ["version"]
 requires = ["flit_core >=3.4,<4"]
 build-backend = "flit_core.buildapi"
 
-[tool.frappe.testing.function_type_validation]
+[tool.optibizpro.testing.function_type_validation]
 max_module_depth = 0
 
 [tool.ruff]
@@ -37,7 +37,7 @@ ignore = [
     "W191",   # indentation contains tabs
     "RUF001", # string contains ambiguous unicode character
 ]
-typing-modules = ["frappe.types.DF"]
+typing-modules = ["optibizpro.types.DF"]
 
 [tool.ruff.format]
 quote-style = "double"
@@ -45,7 +45,7 @@ indent-style = "tab"
 docstring-code-format = true
 
 [tool.ruff.lint.isort.sections]
-"frappe" = ["frappe"]
+"optibizpro" = ["optibizpro"]
 "erpnext" = ["erpnext"]
 "hrms" = ["hrms"]
 
@@ -54,7 +54,7 @@ section-order = [
     "future",
     "standard-library",
     "third-party",
-    "frappe",
+    "optibizpro",
     "erpnext",
     "hrms",
     "first-party",
@@ -63,11 +63,11 @@ section-order = [
 
 
 [project.urls]
-Homepage = "https://frappe.io/hr"
-Repository = "https://github.com/frappe/hrms.git"
-"Bug Reports" = "https://github.com/frappe/hrms/issues"
+Homepage = "https://optibizpro.com/hr"
+Repository = "https://github.com/optibizpro/hrms.git"
+"Bug Reports" = "https://github.com/optibizpro/hrms/issues"
 
 
-[tool.bench.frappe-dependencies]
-frappe = ">=16.0.0-dev,<17.0.0"
+[tool.bench.optibizpro-dependencies]
+optibizpro = ">=16.0.0-dev,<17.0.0"
 erpnext = ">=16.0.0-dev,<17.0.0"
